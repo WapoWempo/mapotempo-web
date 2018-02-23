@@ -83,6 +83,9 @@
           <span class="name"><% if stop.is_a?(StopRest) %><i class="fa fa-coffee fa-fw"></i> <% end %><%= stop.name %></span>
           <% if stop.ref %>
             (<span class="ref"><%= stop.ref %></span>)
+            <% if route.planning.customer.print_barcode %>
+              <div class="ref barcode barcode_<%= route.planning.customer.print_barcode %>"><%= barcode(route.planning.customer.print_barcode, stop.ref) %></div>
+            <% end %>
           <% end %>
           <br/>
           <span class="address">

@@ -158,6 +158,7 @@ en:
         print_header: Routes header
         print_stop_time: Include stop time
         print_map: Include map
+        print_barcode: Barcode
         stores: Stores
         enable_orders: Enable orders
         enable_references: View references
@@ -836,6 +837,9 @@ en:
       print_header_help: Block of text added before each route
       print:
         title: Printing
+        barcode:
+          code128: Code 128
+        barcode_help: Include the Reference as Barcode
       speed_multiplicator_default: '%{n} (default value)'
       speed_multiplicator_help: A value higher than 100% means higher speed.
       audience_url_help: Go to the customer dashboard Audience page

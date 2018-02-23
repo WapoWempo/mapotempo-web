@@ -169,6 +169,7 @@ gem 'savon-multipart', '~> 2.0.2'
 gem 'rest-client'
 gem 'macaddr'
 gem 'rubyzip'
+gem 'barby'
 
 gem 'pnotify-rails', github: 'ngonzalez/pnotify-rails', branch: 'remove-materials-css' # FIXME wait for https://github.com/navinpeiris/pnotify-rails/pull/12
 

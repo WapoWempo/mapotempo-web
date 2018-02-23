@@ -45,6 +45,7 @@ class V01::Entities::Customer < Grape::Entity
   expose(:take_over, documentation: { type: DateTime, desc: 'Visit duration' }) { |m| m.take_over_time_with_seconds }
   expose(:print_planning_annotating, documentation: { type: 'Boolean' })
   expose(:print_header, documentation: { type: String })
+  expose(:print_barcode, documentation: { type: String, values: ::Customer::PRINT_BARCODE, desc: 'Print the Reference as Barcode'})
 
   expose(:job_destination_geocoding_id, documentation: { type: Integer })
   expose(:job_store_geocoding_id, documentation: { type: Integer })

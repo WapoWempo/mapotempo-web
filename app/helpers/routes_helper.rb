@@ -15,6 +15,8 @@
 # along with Mapotempo. If not, see:
 # <http://www.gnu.org/licenses/agpl.html>
 #
+require 'barby/barcode/code_128'
+
 module RoutesHelper
   def display_start_time(route)
     route.start + route.service_time_start_value if route.start && route.service_time_start_value
@@ -67,5 +69,11 @@ module RoutesHelper
       end
     end
     route_devices_hash
+  end
+
+  def barcode(code, ref)
+    Barby::Code128B.new(ref).encoding.split('').collect{ |c|
+      "<span class=\"barcode_x barcode_#{c}\"></span>"
+    }.join('').html_safe
   end
 end

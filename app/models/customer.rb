@@ -19,6 +19,8 @@ require 'sanitize'
 require 'json'
 
 class Customer < ApplicationRecord
+  PRINT_BARCODE = %w(code128).freeze
+
   default_scope { order(:id) }
 
   belongs_to :reseller
@@ -88,6 +90,7 @@ class Customer < ApplicationRecord
   before_save :sanitize_print_header, :nilify_router_options_blanks
   before_save :devices_update_vehicles, prepend: true
   before_validation :check_router_options_format
+  validates :print_barcode, inclusion: { in: Customer::PRINT_BARCODE, allow_nil: true }
 
   include RefSanitizer
 

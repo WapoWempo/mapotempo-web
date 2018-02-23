@@ -21,6 +21,7 @@ customer_one:
   max_zonings: 15
   max_destinations: 66
   max_vehicle_usage_sets: 5
+  print_barcode: code128
   router_options:
     time: true
     distance: true

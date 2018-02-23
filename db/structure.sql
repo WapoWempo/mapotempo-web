@@ -98,7 +98,8 @@ CREATE TABLE customers (
     max_plannings integer,
     max_zonings integer,
     max_destinations integer,
-    max_vehicle_usage_sets integer
+    max_vehicle_usage_sets integer,
+    print_barcode character varying
 );
 
 
@@ -2716,4 +2717,6 @@ INSERT INTO schema_migrations (version) VALUES ('20171211101451');
 INSERT INTO schema_migrations (version) VALUES ('20180103153701');
 
 INSERT INTO schema_migrations (version) VALUES ('20180123141615');
+
+INSERT INTO schema_migrations (version) VALUES ('20180223101253');
 
